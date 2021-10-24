@@ -6,11 +6,14 @@ import 'package:charusat_food/screens/landing_screen.dart';
 import 'package:charusat_food/screens/login_screen.dart';
 import 'package:charusat_food/screens/main_screen.dart';
 import 'package:charusat_food/screens/map_screen.dart';
+import 'package:charusat_food/screens/profile_screen.dart';
+import 'package:charusat_food/screens/profile_update_screen.dart';
 import 'package:charusat_food/screens/seller_home_screen.dart';
 import 'package:charusat_food/screens/splash_screen.dart';
 import 'package:charusat_food/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -37,6 +40,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+               builder: EasyLoading.init(),
+
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Color(0xFF84c225), fontFamily: 'Lato'),
       initialRoute: SplashScreen.id,
@@ -48,7 +53,8 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         LandingScreen.id: (context) => LandingScreen(),
         MainScreen.id: (context) => MainScreen(),
-        SellerHomeScreen.id: (context) => SellerHomeScreen()
+        SellerHomeScreen.id: (context) => SellerHomeScreen(),
+        UpdateProfile.id: (context) => UpdateProfile()
       },
     );
   }
