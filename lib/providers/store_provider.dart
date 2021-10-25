@@ -17,9 +17,9 @@ class StoreProvider with ChangeNotifier {
   DocumentSnapshot storeDetails;
   String distance = '';
 
-  getSelectedStore(storeDetails, distance) {
-    this.distance = distance;
-    this.storeDetails = storeDetails;
+  getSelectedStore(selectedStore, selectedStoreId) {
+    this.selectedStore = selectedStore;
+    this.selectedStoreId = selectedStoreId;
     notifyListeners();
   }
 

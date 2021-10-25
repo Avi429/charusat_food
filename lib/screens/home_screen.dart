@@ -27,11 +27,11 @@ class _HomeScreenState extends State<HomeScreen> {
         //mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ImageSlider(),
-          // Container(
-          //  // height: 200,
-          //   child: TopPicksStore(),
-          //   //color: Colors.red,
-          // ),
+          Container(
+           // height: 200,
+            child: TopPicksStore(),
+            color: Colors.white,
+          ),
           AllNearByStores()
         ],
       ),
